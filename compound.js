@@ -1,4 +1,4 @@
-// Compound 1.0.0
+// Compound 1.0.1
 // more on //github.com/haggen/compound
 ;(function($) {
 
@@ -23,14 +23,10 @@
 
     if('events' in options) {
       $.each(options.events, function(key, value) {
-        var args = key.split(' ');
+        key = key.split(' ');
 
-        that.on(args[0], that[args[1]].selector, function(e) {
-          if(typeof value === 'function') {
-            value.call(that, e);
-          } else {
-            that[value](e);
-          }
+        that.on(key[0], key[1], function(e) {
+          this[value](e);
         });
       });
 
@@ -48,15 +44,24 @@
 
   Compound.prototype = {
     on: function() {
-      this.element.on.apply(this, arguments);
+      var args, action;
+
+      args = [].slice.call(arguments);
+      action = args.pop();
+
+      console.log(args, action);
+
+      args.push($.proxy(action, this));
+
+      this.element.on.apply(this.element, args);
     },
 
     off: function() {
-      this.element.off.apply(this, arguments);
+      this.element.off.apply(this.element, arguments);
     },
 
     trigger: function() {
-      this.element.trigger.apply(this, arguments);
+      this.element.trigger.apply(this.element, arguments);
     }
   };
 
