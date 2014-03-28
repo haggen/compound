@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Compound by haggen</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Compound</h1>
+        <p>Write widgets/components with ease.</p>
+
+        <p class="view"><a href="https://github.com/haggen/compound">View the Project on GitHub <small>haggen/compound</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/haggen/compound/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/haggen/compound/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/haggen/compound">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="compound" class="anchor" href="#compound"><span class="octicon octicon-link"></span></a>Compound</h1>
+
+<blockquote>
+<p>Write widgets with ease.</p>
+</blockquote>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>Compound is a jQuery plugin that allows you to write <strong>compounds</strong> (widgets, components, or whatever you call it) in a streamlined way.</p>
+
+<p>Compound is the step before Backbone, Angular, or something like that. You don't have to learn something new, it's the plain and simple jQuery you're used to, only formalized.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Simply add <code>compound.js</code> after jQuery and then create your compounds.</p>
+
+<p>For instance:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'p'</span><span class="p">).</span><span class="nx">compound</span><span class="p">({</span>
+  <span class="nx">ready</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>The example above created a compound for every <code>&lt;p&gt;</code>.</p>
+
+<p>The argument we provide is a hash the configures your compound. You may provide arbitrary keys with values or functions, but we got a few reserved ones - like <code>ready</code>.</p>
+
+<p>The <code>ready</code> option is a function which will be called after the compound is configured. <code>this</code> here references the compound itself and <code>this.element</code> its root element - in this case a <code>&lt;p&gt;</code>.</p>
+
+<p>Check out some other examples:</p>
+
+<ul>
+<li>...</li>
+</ul><h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<h3>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h3>
+
+<ul>
+<li><code>ready</code></li>
+<li><code>children</code></li>
+<li><code>events</code></li>
+</ul><h3>
+<a name="events" class="anchor" href="#events"><span class="octicon octicon-link"></span></a>Events</h3>
+
+<p>...</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>See <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US">CC Attribution-ShareAlike 4.0 International</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/haggen">haggen</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
